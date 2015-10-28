@@ -14,7 +14,7 @@ require_once APPPATH."/third_party/BizwebAPI/autoload.php";
 
 - Get 1 product by id 
 
-```ruby
-$proBW = new ProductBW( 'your_Bizweb_store.myBizweb.com', 'your_Bizweb_token', 'your_Bizweb_api_key', 'your_Bizweb_api_secret'); 
+```php 
+$proBW = new ProductBW( 'your_Bizweb_store.bizwebvietnam.net', 'your_Bizweb_token', 'your_Bizweb_api_key', 'your_Bizweb_api_secret'); 
 $product = $proBW->get_one('1000459014');  
 ``` 
