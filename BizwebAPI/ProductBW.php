@@ -10,9 +10,20 @@ class ProductBW extends BizwebClient {
     } 
 	 
 	/*
+	 * get all products 
+	 * 
+	 * @author: phong.nguyen 20151029  
+	 * @param: string $strID - Product ID 
+	 */  
+	public function get_all(){  
+		return $this->call('GET', '/admin/products.json', array()); 
+	}
+	
+	 
+	/*
 	 * get one product 
 	 * 
-	 * @author: phong.nguyen 20151021  
+	 * @author: phong.nguyen 20151029  
 	 * @param: string $strID - Product ID 
 	 */  
 	public function get_one($strID){  
@@ -22,7 +33,7 @@ class ProductBW extends BizwebClient {
 	/*
 	 * post one product  
 	 * 
-	 * @author: phong.nguyen 20151021  
+	 * @author: phong.nguyen 20151029  
 	 * @param: array $arrData - Product data under array  
 	 */  
 	public function post_one($arrData){  
@@ -33,7 +44,7 @@ class ProductBW extends BizwebClient {
 	/*
 	 * delete one product  
 	 * 
-	 * @author: phong.nguyen 20151021  
+	 * @author: phong.nguyen 20151029  
 	 * @param: string $strID - ID need to be deleted 
 	 */  
 	public function delete_one($strID){  
@@ -43,7 +54,7 @@ class ProductBW extends BizwebClient {
 	/*
 	 * update one product  
 	 * 
-	 * @author: phong.nguyen 20151021  
+	 * @author: phong.nguyen 20151029  
 	 * @param: string $strID - ID need to be updated 
 	 * @param: array $arrData - Product data under array  
 	 */  
