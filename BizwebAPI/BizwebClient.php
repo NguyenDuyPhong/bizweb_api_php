@@ -83,7 +83,10 @@ class BizwebClient {
 		$response = json_decode($response, true);
 
 		if (isset($response['errors']) or ($this->last_response_headers['http_status_code'] >= 400))
+		{
+			// var_dump($response); 
 			throw new BizwebApiException($method, $path, $params, $this->last_response_headers, $response);
+		}
 
 		return (is_array($response) and (count($response) > 0)) ? array_shift($response) : $response;
 	}
